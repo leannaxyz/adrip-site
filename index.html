@@ -8,169 +8,167 @@
     <style>
         :root {
             --gold: #b38b4d;
-            --dark-gold: #866635;
-            --bg-black: #0a0a0a;
+            --dark-gold: #7a5a2d;
+            --bg-black: #080808;
         }
 
         body {
-            /* This creates a subtle 'grain' texture using a repeating radial gradient */
             background-color: var(--bg-black);
-            background-image: 
-                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: 3px 3px; 
-            color: #fff;
-            font-family: 'Cormorant Garamond', serif;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            padding: 20px;
+            overflow-x: hidden;
         }
 
-        .card-border {
-            /* Subtle 'Metal' Gradient Border */
-            border: 1px solid;
-            border-image: linear-gradient(to bottom, var(--gold), var(--dark-gold)) 1;
-            padding: 70px 40px;
-            width: 400px;
+        /* The Texture Layer */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.15; /* Adjust this to make texture more/less visible */
+            pointer-events: none;
+            z-index: 1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px 20px;
             text-align: center;
-            background: #050505;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            font-family: 'Cormorant Garamond', serif;
+            color: #fff;
         }
 
         h1 {
             color: var(--gold);
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 300;
             margin: 0;
-            letter-spacing: 12px;
+            letter-spacing: 15px;
             text-transform: lowercase;
         }
 
+        /* Fixed to one line */
         .subtitle {
             text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 6px;
-            margin-top: 15px;
-            margin-bottom: 60px;
+            font-size: 0.75rem;
+            letter-spacing: 5px;
+            margin: 10px 0 60px;
             color: #888;
-        }
-
-        /* Minimalist Divider instead of diamond */
-        .divider-line {
-            width: 40px;
-            height: 1px;
-            background-color: var(--gold);
-            margin: 0 auto 40px;
+            white-space: nowrap; 
         }
 
         .label {
             color: var(--gold);
-            font-weight: 400;
             text-transform: lowercase;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
             letter-spacing: 2px;
+            margin-bottom: 8px;
         }
 
         .name {
-            font-size: 2rem;
-            margin-bottom: 60px;
+            font-size: 1.8rem; /* Smaller as requested */
             font-weight: 300;
+            margin-bottom: 60px;
             letter-spacing: 1px;
+        }
+
+        /* Centered and smaller grid */
+        .services-container {
+            display: inline-block;
+            margin: 0 auto 60px;
+            text-align: left;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            text-align: left;
-            font-size: 1.1rem;
-            gap: 25px;
-            margin-bottom: 60px;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-columns: auto auto;
+            gap: 20px 40px;
+            font-size: 0.95rem; /* Smaller font */
+            color: #ccc;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
         }
 
         .service-item::before {
             content: "";
             display: inline-block;
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             background: var(--gold);
-            margin-right: 10px;
-            vertical-align: middle;
+            margin-right: 12px;
         }
 
         .location-section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .appointment-text {
             font-weight: 600;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .city-text {
             text-transform: lowercase;
-            font-size: 1rem;
-            color: #666;
+            font-size: 0.9rem;
+            color: #555;
             letter-spacing: 3px;
         }
 
+        /* Enhanced Metal Gradient */
         .btn-gold {
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            background: linear-gradient(145deg, #d4af37, #866635);
             color: #000;
             border: none;
-            padding: 20px;
-            width: 100%;
+            padding: 22px;
+            width: 90%;
             font-weight: 600;
             text-transform: lowercase;
             letter-spacing: 3px;
-            cursor: pointer;
             font-size: 1rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
         .btn-outline {
             background: transparent;
             border: 1px solid #222;
-            color: #666;
-            padding: 18px;
-            width: 100%;
+            color: #555;
+            padding: 15px;
+            width: 90%;
             text-transform: lowercase;
             letter-spacing: 3px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-
-        .btn-outline:hover {
-            border-color: var(--gold);
-            color: var(--gold);
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
-    <div class="card-border">
+    <div class="container">
         <h1>adrip</h1>
         <div class="subtitle">Fine Jewelry & Custom Design</div>
         
-        <div class="divider-line"></div>
-
         <div class="label">founder & master jeweler</div>
         <div class="name">Ashton Coates</div>
 
         <div class="label">specialized services</div>
-        <div class="services-grid">
-            <div class="service-item">Custom Engagement</div>
-            <div class="service-item">Expert Resizing</div>
-            <div class="service-item">Professional Repair</div>
-            <div class="service-item">Luxury Cleaning</div>
+        <div class="services-container">
+            <div class="services-grid">
+                <div class="service-item">Custom Engagement</div>
+                <div class="service-item">Expert Resizing</div>
+                <div class="service-item">Professional Repair</div>
+                <div class="service-item">Luxury Cleaning</div>
+            </div>
         </div>
 
         <div class="location-section">
@@ -179,7 +177,6 @@
         </div>
 
         <button class="btn-gold" onclick="window.location.href='tel:8436234469'">call for appointment</button>
-        
         <button class="btn-outline">email inquiry</button>
     </div>
 

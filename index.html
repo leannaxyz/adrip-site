@@ -1,25 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adrip</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #06070b;
+      color: #ffffff;
+      font-family: "Inter", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 420px;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 64px;
+      color: #d4aa43;
+      margin: 0;
+      letter-spacing: 0.12em;
+    }
+
+    .sub {
+      font-family: "Cormorant Garamond", serif;
+      color: #b7b5c4;
+      margin: 16px 0 32px;
+      letter-spacing: 0.15em;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4aa43;
+      color: #000;
+      padding: 16px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
 <body>
-  <main class="shell" style="display:flex;align-items:center;justify-content:center;min-height:80vh;">
-    
-    <div style="text-align:center;max-width:420px;margin:auto;">
-      
-      <h1 class="brand-name">adrip</h1>
-      
-      <p style="
-        margin: 16px 0 28px;
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 22px;
-        color: #b7b5c4;
-        letter-spacing: 0.12em;
-      ">
-        by appointment only
-      </p>
+  <div class="container">
+    <h1>adrip</h1>
 
-      <a class="btn btn-primary" href="tel:18436234469">
-        call for appointment
-      </a>
-
+    <div class="sub">
+      by appointment only
     </div>
 
-  </main>
+    <a class="btn" href="tel:18436234469">
+      call for appointment
+    </a>
+  </div>
 </body>
+</html>

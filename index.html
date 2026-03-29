@@ -21,13 +21,11 @@
             min-height: 100vh;
             font-family: 'Cormorant Garamond', serif;
             color: #fff;
-            /* Inset Border: Creates a 1px gold line 15px from the edge */
             box-shadow: inset 0 0 0 15px var(--bg-black), 
                         inset 0 0 0 16px var(--gold);
             box-sizing: border-box;
         }
 
-        /* Sophisticated Silk Grain */
         body::before {
             content: "";
             position: fixed;
@@ -43,7 +41,7 @@
             z-index: 2;
             width: 100%;
             max-width: 380px;
-            padding: 60px 35px; /* Added padding to clear the border */
+            padding: 60px 35px;
             text-align: center;
         }
 
@@ -52,7 +50,8 @@
             font-size: 4rem;
             font-weight: 300;
             margin: 0;
-            letter-spacing: 12px;
+            /* Changed from 12px to 6px for tighter spacing */
+            letter-spacing: 6px; 
             text-transform: lowercase;
         }
 

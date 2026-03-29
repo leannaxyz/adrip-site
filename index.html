@@ -21,12 +21,13 @@
             min-height: 100vh;
             font-family: 'Cormorant Garamond', serif;
             color: #fff;
-            /* Stable Border: Inset box-shadow won't move on scroll/resize */
+            /* Inset Border: Creates a 1px gold line 15px from the edge */
             box-shadow: inset 0 0 0 15px var(--bg-black), 
                         inset 0 0 0 16px var(--gold);
+            box-sizing: border-box;
         }
 
-        /* Refined Silk Texture */
+        /* Sophisticated Silk Grain */
         body::before {
             content: "";
             position: fixed;
@@ -42,7 +43,7 @@
             z-index: 2;
             width: 100%;
             max-width: 380px;
-            padding: 40px 30px;
+            padding: 60px 35px; /* Added padding to clear the border */
             text-align: center;
         }
 
@@ -59,7 +60,7 @@
             text-transform: uppercase;
             font-size: 0.7rem;
             letter-spacing: 5px;
-            margin: 10px 0 70px;
+            margin: 10px 0 60px;
             color: #555;
             white-space: nowrap;
         }
@@ -75,14 +76,14 @@
         .name {
             font-size: 1.5rem;
             font-weight: 300;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
             letter-spacing: 2px;
             color: #efefef;
         }
 
         .services-container {
             display: inline-block;
-            margin: 0 auto 70px;
+            margin: 0 auto 60px;
             text-align: left;
         }
 
@@ -114,7 +115,7 @@
 
         .appointment-text {
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1rem;
             letter-spacing: 2px;
             margin-bottom: 5px;
             color: #ccc;
@@ -141,6 +142,7 @@
             cursor: pointer;
             text-decoration: none;
             display: block;
+            box-sizing: border-box;
         }
 
         .btn-outline {
@@ -184,7 +186,7 @@
         </div>
 
         <a href="tel:8436234469" class="btn-gold">call for appointment</a>
-        <a href="mailto:ashtonthejeweler@gmail.com" class="btn-outline">email inquiry</a>
+        <a href="mailto:ashtonthejeweler@gmail.com?subject=Appointment%20Inquiry%3A%20Adrip%20Fine%20Jewelry" class="btn-outline">email inquiry</a>
     </div>
 
 </body>

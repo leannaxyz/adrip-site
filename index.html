@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADRIP | Private Atelier</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #b38b4d;
-            --muted-gold: #7a5a2d;
             --bg-black: #050505;
         }
 
@@ -19,7 +18,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Montserrat', sans-serif;
             color: #fff;
             box-shadow: inset 0 0 0 15px var(--bg-black), 
                         inset 0 0 0 16px rgba(179, 139, 77, 0.25);
@@ -27,20 +26,12 @@
             overflow: hidden;
         }
 
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at center, rgba(179, 139, 77, 0.05) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
+        /* Subtle Vault Texture */
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.06;
+            opacity: 0.04;
             pointer-events: none;
             z-index: 2;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -55,58 +46,46 @@
             text-align: center;
         }
 
-        h1 {
-            color: var(--gold);
-            font-size: 4.2rem;
-            font-weight: 300;
-            margin: 0;
-            letter-spacing: 4px;
-            text-transform: lowercase;
-            line-height: 1;
+        /* Logo Integration */
+        .logo-img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 5px;
+            filter: brightness(1.2); /* Makes the white pop */
         }
 
         .brand-subtitle {
-            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             font-size: 0.6rem;
-            font-weight: 200;
-            letter-spacing: 6px;
-            margin: 12px 0 10px;
-            color: rgba(255,255,255,0.6);
-        }
-
-        .appointment-notice {
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            font-size: 0.55rem;
-            letter-spacing: 3px;
-            color: var(--muted-gold);
+            font-weight: 400;
+            letter-spacing: 5px;
             margin-bottom: 50px;
+            color: rgba(255,255,255,0.5);
         }
 
         .divider {
             height: 1px;
-            width: 30px;
-            background: var(--muted-gold);
+            width: 40px;
+            background: var(--gold);
             margin: 0 auto 50px;
             opacity: 0.4;
         }
 
         .section-label {
-            font-family: 'Montserrat', sans-serif;
             color: var(--gold);
             text-transform: uppercase;
-            font-size: 0.55rem;
-            font-weight: 400;
+            font-size: 0.6rem;
+            font-weight: 700;
             letter-spacing: 4px;
             margin-bottom: 12px;
         }
 
         .master-name {
-            font-size: 1.9rem;
-            font-weight: 300;
+            font-size: 1.8rem;
+            font-weight: 200;
             margin-bottom: 60px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .capsule-grid {
@@ -117,15 +96,15 @@
         }
 
         .capsule-item {
-            font-size: 0.9rem;
-            font-weight: 300;
+            font-size: 0.8rem;
+            font-weight: 400;
             color: rgba(255,255,255,0.6);
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .cta-header {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
+            font-weight: 700;
             font-size: 0.65rem;
             letter-spacing: 6px;
             text-transform: uppercase;
@@ -134,12 +113,11 @@
         }
 
         .cta-instruction {
-            font-family: 'Montserrat', sans-serif;
             font-size: 0.6rem;
             letter-spacing: 2px;
             color: rgba(255,255,255,0.4);
             margin-bottom: 25px;
-            text-transform: lowercase;
+            text-transform: uppercase;
         }
 
         .btn-primary {
@@ -148,29 +126,29 @@
             border: none;
             padding: 22px 10px;
             width: 100%;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             font-size: 0.75rem;
             cursor: pointer;
             text-decoration: none;
             display: block;
             box-sizing: border-box;
-            transition: opacity 0.3s ease;
+            transition: transform 0.2s ease;
         }
 
         .btn-primary:active {
-            opacity: 0.8;
+            transform: scale(0.98);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>adrip</h1>
+        <img src="logo.png" alt="adrip" class="logo-img">
+        
         <div class="brand-subtitle">Custom Grillz & Fine Jewelry</div>
-        <div class="appointment-notice">By Appointment Only</div>
+        <div class="cta-instruction" style="margin-top: -35px; margin-bottom: 40px;">By Appointment Only</div>
         
         <div class="divider"></div>
 

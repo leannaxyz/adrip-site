@@ -21,14 +21,12 @@
             min-height: 100vh;
             font-family: 'Cormorant Garamond', serif;
             color: #fff;
-            /* Inset Frame with a soft glow */
             box-shadow: inset 0 0 0 15px var(--bg-black), 
                         inset 0 0 0 16px rgba(179, 139, 77, 0.25);
             box-sizing: border-box;
             overflow: hidden;
         }
 
-        /* The 'Vault Spotlight' Effect */
         body::after {
             content: "";
             position: fixed;
@@ -38,7 +36,6 @@
             z-index: 1;
         }
 
-        /* Micro-Texture Grain */
         body::before {
             content: "";
             position: fixed;
@@ -53,7 +50,7 @@
             position: relative;
             z-index: 3;
             width: 100%;
-            max-width: 300px; 
+            max-width: 310px; 
             padding: 20px;
             text-align: center;
         }
@@ -71,20 +68,28 @@
         .brand-subtitle {
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 200;
-            letter-spacing: 10px; /* Even wider for NYC/Miami vibe */
-            margin: 15px 0 60px;
-            color: rgba(255,255,255,0.4);
+            letter-spacing: 6px;
+            margin: 12px 0 10px;
+            color: rgba(255,255,255,0.6);
         }
 
-        /* The hallmark divider */
+        .appointment-notice {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.55rem;
+            letter-spacing: 3px;
+            color: var(--muted-gold);
+            margin-bottom: 50px;
+        }
+
         .divider {
             height: 1px;
             width: 30px;
             background: var(--muted-gold);
             margin: 0 auto 50px;
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         .section-label {
@@ -94,11 +99,11 @@
             font-size: 0.55rem;
             font-weight: 400;
             letter-spacing: 4px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .master-name {
-            font-size: 2rem;
+            font-size: 1.9rem;
             font-weight: 300;
             margin-bottom: 60px;
             letter-spacing: 1px;
@@ -108,7 +113,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px 5px;
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
 
         .capsule-item {
@@ -118,28 +123,36 @@
             letter-spacing: 1px;
         }
 
-        .concierge-header {
+        .cta-header {
             font-family: 'Montserrat', sans-serif;
             font-weight: 200;
             font-size: 0.65rem;
             letter-spacing: 6px;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 30px;
+            margin-bottom: 10px;
+        }
+
+        .cta-instruction {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 25px;
+            text-transform: lowercase;
         }
 
         .btn-primary {
             background: #fff;
             color: #000;
             border: none;
-            padding: 20px;
+            padding: 22px 10px;
             width: 100%;
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             font-size: 0.75rem;
-            margin-bottom: 12px;
             cursor: pointer;
             text-decoration: none;
             display: block;
@@ -150,36 +163,14 @@
         .btn-primary:active {
             opacity: 0.8;
         }
-
-        .btn-secondary {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.15);
-            color: rgba(255,255,255,0.4);
-            padding: 16px;
-            width: 100%;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 0.65rem;
-            cursor: pointer;
-            text-decoration: none;
-            display: block;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:active {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>adrip</h1>
-        <div class="brand-subtitle">Private Atelier</div>
+        <div class="brand-subtitle">Custom Grillz & Fine Jewelry</div>
+        <div class="appointment-notice">By Appointment Only</div>
         
         <div class="divider"></div>
 
@@ -187,16 +178,16 @@
         <div class="master-name">Ashton Coates</div>
 
         <div class="capsule-grid">
-            <div class="capsule-item">Bespoke Grillz</div>
-            <div class="capsule-item">VVS Setting</div>
-            <div class="capsule-item">Private Commission</div>
-            <div class="capsule-item">Restoration</div>
+            <div class="capsule-item">Custom Grillz</div>
+            <div class="capsule-item">VVS+ Setting</div>
+            <div class="capsule-item">Private Commissions</div>
+            <div class="capsule-item">Restoration & Upgrade</div>
         </div>
 
-        <div class="concierge-header">Digital Concierge</div>
+        <div class="cta-header">Appointments Limited</div>
+        <div class="cta-instruction">Call to request availability.</div>
 
-        <a href="tel:8436234469" class="btn-primary">Request Session</a>
-        <a href="mailto:ashtonthejeweler@gmail.com?subject=Private%20Atelier%20Inquiry" class="btn-secondary">Begin Consultation</a>
+        <a href="tel:8436234469" class="btn-primary">Call to Book Private Consultations</a>
     </div>
 
 </body>

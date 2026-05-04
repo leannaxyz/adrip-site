@@ -26,7 +26,6 @@
             overflow: hidden;
         }
 
-        /* Subtle Vault Texture */
         body::before {
             content: "";
             position: fixed;
@@ -46,44 +45,42 @@
             text-align: center;
         }
 
-        /* Logo Integration */
         .logo-img {
-            width: 180px;
+            width: 160px; /* Nudged down slightly to balance the page */
             height: auto;
             margin-bottom: 5px;
-            filter: brightness(1.2); /* Makes the white pop */
         }
 
         .brand-subtitle {
             text-transform: uppercase;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: 400;
             letter-spacing: 5px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             color: rgba(255,255,255,0.5);
         }
 
         .divider {
             height: 1px;
-            width: 40px;
+            width: 30px;
             background: var(--gold);
-            margin: 0 auto 50px;
+            margin: 0 auto 40px;
             opacity: 0.4;
         }
 
         .section-label {
             color: var(--gold);
             text-transform: uppercase;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: 700;
             letter-spacing: 4px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .master-name {
-            font-size: 1.8rem;
+            font-size: 1.4rem; /* Returned to the smaller, more elegant size */
             font-weight: 200;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -91,32 +88,41 @@
         .capsule-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px 5px;
-            margin-bottom: 70px;
+            gap: 20px 5px;
+            margin-bottom: 45px;
         }
 
         .capsule-item {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 400;
             color: rgba(255,255,255,0.6);
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
+        .market-claim {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
         .cta-header {
             font-weight: 700;
-            font-size: 0.65rem;
-            letter-spacing: 6px;
+            font-size: 0.6rem;
+            letter-spacing: 5px;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .cta-instruction {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             letter-spacing: 2px;
             color: rgba(255,255,255,0.4);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-transform: uppercase;
         }
 
@@ -124,7 +130,7 @@
             background: #fff;
             color: #000;
             border: none;
-            padding: 22px 10px;
+            padding: 20px 10px;
             width: 100%;
             font-weight: 700;
             text-transform: uppercase;
@@ -134,11 +140,6 @@
             text-decoration: none;
             display: block;
             box-sizing: border-box;
-            transition: transform 0.2s ease;
-        }
-
-        .btn-primary:active {
-            transform: scale(0.98);
         }
     </style>
 </head>
@@ -148,7 +149,6 @@
         <img src="logo.png" alt="adrip" class="logo-img">
         
         <div class="brand-subtitle">Custom Grillz & Fine Jewelry</div>
-        <div class="cta-instruction" style="margin-top: -35px; margin-bottom: 40px;">By Appointment Only</div>
         
         <div class="divider"></div>
 
@@ -162,10 +162,12 @@
             <div class="capsule-item">Restoration & Upgrade</div>
         </div>
 
-        <div class="cta-header">Appointments Limited</div>
-        <div class="cta-instruction">Call to request availability.</div>
+        <div class="market-claim">Serving Charlotte & Select Territories</div>
 
-        <a href="tel:8436234469" class="btn-primary">Call to Book Private Consultations</a>
+        <div class="cta-header">Availability Limited</div>
+        <div class="cta-instruction">By Appointment Only</div>
+
+        <a href="tel:8436234469" class="btn-primary">Book Consultation</a>
     </div>
 
 </body>

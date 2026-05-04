@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADRIP | Private Atelier</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -21,7 +20,7 @@
             min-height: 100vh;
             font-family: 'Cormorant Garamond', serif;
             color: #fff;
-            /* Border fixed to stay inside the viewport */
+            /* Stable double-inset border */
             box-shadow: inset 0 0 0 15px var(--bg-black), 
                         inset 0 0 0 16px rgba(179, 139, 77, 0.3);
             box-sizing: border-box;
@@ -32,7 +31,7 @@
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.04;
+            opacity: 0.05;
             pointer-events: none;
             z-index: 1;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -42,19 +41,19 @@
             position: relative;
             z-index: 2;
             width: 100%;
-            /* Fixed max-width to ensure it never touches the gold border */
-            max-width: 300px; 
+            max-width: 310px; /* Constrained for mobile safety */
             padding: 20px;
             text-align: center;
         }
 
         h1 {
             color: var(--gold);
-            font-size: 4rem;
+            font-size: 4.2rem;
             font-weight: 300;
             margin: 0;
-            letter-spacing: 6px;
+            letter-spacing: 4px;
             text-transform: lowercase;
+            line-height: 1;
         }
 
         .brand-subtitle {
@@ -62,7 +61,7 @@
             text-transform: uppercase;
             font-size: 0.65rem;
             letter-spacing: 8px;
-            margin: 10px 0 60px;
+            margin: 12px 0 65px;
             color: rgba(255,255,255,0.4);
         }
 
@@ -76,24 +75,23 @@
         }
 
         .master-name {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 300;
-            margin-bottom: 60px;
+            margin-bottom: 65px;
             letter-spacing: 1px;
-            color: #fff;
         }
 
         .capsule-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px 10px;
-            margin-bottom: 60px;
+            gap: 25px 5px;
+            margin-bottom: 65px;
         }
 
         .capsule-item {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 300;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.7);
             letter-spacing: 1px;
         }
 
@@ -101,34 +99,34 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             font-size: 0.7rem;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .btn-primary {
             background: #fff;
             color: #000;
             border: none;
-            padding: 18px;
+            padding: 20px;
             width: 100%;
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 4px;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             margin-bottom: 12px;
             cursor: pointer;
             text-decoration: none;
             display: block;
-            box-sizing: border-box; /* Crucial for keeping button inside container */
+            box-sizing: border-box; /* Keeps it inside the frame */
         }
 
         .btn-secondary {
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.5);
             padding: 16px;
             width: 100%;
             font-family: 'Montserrat', sans-serif;
@@ -138,7 +136,7 @@
             cursor: pointer;
             text-decoration: none;
             display: block;
-            box-sizing: border-box; /* Crucial for keeping button inside container */
+            box-sizing: border-box; /* Keeps it inside the frame */
         }
     </style>
 </head>
@@ -155,7 +153,7 @@
             <div class="capsule-item">Bespoke Grillz</div>
             <div class="capsule-item">VVS Setting</div>
             <div class="capsule-item">Private Commission</div>
-            <div class="capsule-item">Legacy Overhaul</div>
+            <div class="capsule-item">Restoration</div>
         </div>
 
         <div class="appointment-status">Strictly by Appointment</div>

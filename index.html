@@ -27,7 +27,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Clean, high-performance velvet micro-grain */
         body::before {
             content: "";
             position: fixed;
@@ -47,15 +46,25 @@
             text-align: center;
         }
 
+        /* The Psychological Weight Shift Logo */
         .brand-logo-text {
             color: #fff;
             font-size: 3rem;
-            font-weight: 300;
             margin: 0;
-            letter-spacing: 12px; 
+            letter-spacing: 4px; 
             text-transform: lowercase;
             line-height: 1;
-            padding-left: 12px; 
+            padding-left: 4px; 
+        }
+
+        /* Thick, grounding prefix */
+        .logo-prefix {
+            font-weight: 500; 
+        }
+
+        /* Razor-thin core */
+        .logo-core {
+            font-weight: 100; 
         }
 
         .brand-subtitle {
@@ -150,7 +159,9 @@
 <body>
 
     <div class="container">
-        <div class="brand-logo-text">adrip</div>
+        <div class="brand-logo-text">
+            <span class="logo-prefix">a</span><span class="logo-core">drip</span>
+        </div>
         
         <div class="brand-subtitle">Bespoke Dental Art & Fine Jewelry</div>
         
